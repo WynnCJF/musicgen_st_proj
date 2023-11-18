@@ -1,6 +1,5 @@
 import streamlit as st
 import replicate
-import os
 import concurrent.futures
 
 
@@ -21,19 +20,19 @@ def call_replicate_api(text_prompt, length):
 st.header("MusicGen Single-Instrument Experiment 🎵")
 
 # Load and set token
-st.divider()
+# st.divider()
 
-st.markdown("### Input your Replicate token:")
+# st.markdown("### Input your Replicate token:")
 
-st.text_input(
-    label="Token",
-    value="",
-    key="replicate_token",
-    placeholder="Your Replicate Token",
-    label_visibility="collapsed"
-)
+# st.text_input(
+#     label="Token",
+#     value="",
+#     key="replicate_token",
+#     placeholder="Your Replicate Token",
+#     label_visibility="collapsed"
+# )
 
-os.environ['REPLICATE_API_TOKEN'] = st.session_state.replicate_token 
+# os.environ['REPLICATE_API_TOKEN'] = st.session_state.replicate_token 
 
 # Sidebar selection
 with st.sidebar:
